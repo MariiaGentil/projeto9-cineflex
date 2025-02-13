@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-function Header({ primaryColor , secundaryColor}) {
+function Header() {
     return (
-        <DivHeader primaryColor={primaryColor} secundaryColor={secundaryColor}>
+        <DivHeader>
             <h1 >CINEFLEX</h1>
         </DivHeader>
     )
@@ -11,12 +11,12 @@ function Header({ primaryColor , secundaryColor}) {
 const DivHeader = styled.div`
 
     display: flex;
-    background-color: ${props => props.secundaryColor};
+    background-color: #C3CFD9;
     justify-content: center;
     
 
             h1{
-                color: ${props => props.primaryColor};
+                color: #E8833A;
                 font-family: sans-serif;
                 font-weight: 400;
                 padding: 20px;

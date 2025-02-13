@@ -19,7 +19,7 @@ function Filmes() {
         <>
             <PFilmes>Selecione o filme</PFilmes>
             <DivFilmes>
-                {filmes.map(f => <Link to={`/sessao/${f.id}`}><img src={f.posterURL}/></Link>)}
+                {filmes.map(f => <Link to={`/sessao/${f.id}`} key={f.id}><img src={f.posterURL}/></Link>)}
             </DivFilmes>
         </>
     );
@@ -29,12 +29,14 @@ const DivFilmes = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     margin: 30px 0;
     
     img{
         width: 150px;
         cursor: pointer;
+        border: 5px solid #FFF;
+        box-shadow: 0px 0px 5px #00000028;
     }
 
 `
