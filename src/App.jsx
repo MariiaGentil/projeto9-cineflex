@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Filmes />}></Route>
         <Route path="/sessao/:filmeID" element={<Sessao setSessoes={setSessoes} sessoes={sessoes}/>}></Route>
-        <Route path="/assentos/:sessaoID/:horaID" element={<Assentos sessoes={sessoes}/>}></Route>
+        <Route path="/assentos/:horaID" element={<Assentos sessoes={sessoes}/>}></Route>
       </Routes>
     </BrowserRouter>
   )

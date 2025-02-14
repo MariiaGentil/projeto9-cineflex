@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 function Footer({ sessoes, assentos }) {
+
     let templateFooter = null
 
-    if (sessoes !== null) {
+    if (sessoes !== null && sessoes !== undefined) {
         const { title, posterURL } = sessoes
         templateFooter = (
             <DivFooterSessao>
                 <img src={posterURL} />
                 <div>
                     <p>{title}</p>
-                    {assentos === null ? <></> : <p>{assentos}</p>}
+                    {assentos !== null && assentos !== undefined ? <p>{assentos.day.weekday} - {assentos.name}</p> : <></>}
                 </div>
             </DivFooterSessao>
         )
@@ -36,6 +37,7 @@ const DivFooterSessao = styled.div`
 
     p{
         font-family: sans-serif;
+        margin-bottom: 10px;
         font-weight: 500;
     }
 `

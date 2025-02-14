@@ -28,7 +28,7 @@ function Sessao({setSessoes, sessoes}) {
                 return (
                     <>
                         <p>{dS.weekday} - {dS.date}</p>
-                        {showTimes.map(sT => (<Link to={`/assentos/${dS.id}/${sT.id}`}><button>{sT.name}</button></Link>))}
+                        {showTimes.map(sT => (<Link to={`/assentos/${sT.id}`} key={sT.id}><button>{sT.name}</button></Link>))}
                     </>
                 )
             })
@@ -66,6 +66,7 @@ const DivDatas = styled.div`
 
     button {
         background-color: #E8833A;
+        border-radius: 5px;
         border: none;
         padding: 10px 20px;
         margin-right: 10px;
